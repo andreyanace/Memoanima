@@ -1,46 +1,97 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memo Anima</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            text-align: center;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-        }
-        main {
-            padding: 40px 20px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memo Anima</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0f0f0f;
+      color: #f4f4f4;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #1a1a1a;
+    }
+    h1, p {
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 1s ease;
+    }
+    .visible {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease 0.5s;
+    }
+    section {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .highlight {
+      color: #f97316;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #f97316;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #ea580c;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Memo Anima</h1>
-        <p>Sejarah dalam desain, cerita dalam kaos</p>
-    </header>
-    <main>
-        <h2>Selamat datang di Memo Anima</h2>
-        <p>Kami mengangkat kisah sejarah melalui desain fashion yang memikat dan membuat berpikir.</p>
-    </main>
-    <footer>
-        &copy; 2025 Memo Anima. All rights reserved.
-    </footer>
+  <header>
+    <h1 id="brandTitle">Memo Anima</h1>
+    <p id="brandTagline">Membawa sejarah ke dalam desain yang membuat orang berpikir.</p>
+  </header>
+
+  <section>
+    <h2>Apa Itu Memo Anima?</h2>
+    <p>
+      <span class="highlight">Memo</span> berarti ingatan. <span class="highlight">Anima</span> berarti jiwa. Kami menggabungkannya menjadi sebuah brand yang tidak hanya menjual pakaian, tetapi juga cerita di balik setiap desain.
+    </p>
+
+    <h2>Visi Kami</h2>
+    <p>
+      Membuat sejarah kembali relevan, bukan dengan cara yang membosankan, tapi dengan seni dan desain yang membangkitkan rasa ingin tahu.
+    </p>
+
+    <a class="btn" onclick="lihatKoleksi()">Lihat Koleksi</a>
+  </section>
+
+  <script>
+    window.onload = () => {
+      document.getElementById('brandTitle').classList.add('visible');
+      document.getElementById('brandTagline').classList.add('visible');
+    };
+
+    function lihatKoleksi() {
+      alert("Koleksi akan segera tersedia!");
+    }
+  </script>
 </body>
 </html>
